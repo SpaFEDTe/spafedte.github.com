@@ -1,0 +1,142 @@
+---
+layout: main
+title: Home
+---
+
+<h1>News</h1>
+<div class="description">
+  <h5>Jan 15, 2011: first SpaFEDTe commit.</h5>
+</div>
+
+
+<h1>Welcome</h1>
+<div class="description">
+  <p> SpaFEDTe is a Template based C++ library for creating Discontinous Finite Element Spaces. </p>
+  
+  <p> The ultimate (quite ambitious) goal is to provide a framework for the numerical approximation of PDEs.
+  Many high-quality finite element libraries exist and many of them offer a more comprehensive set of features. So, why SpaFEDTe? </p>
+  
+  <p> SpaFEDTe offers a variety of Discontinuous Finite Element Spaces and allows to easily implement new ones combining (possibly user defined) basis functions, mapping functions and quadrature rules.
+  In addition to standard Reference Frame FE Spaces the library implements Physical Frame FE Spaces, here considered as a way to increase the flexibility and the accuracy of discontinuous Galerkin methods. </p>
+</div>
+
+<h2>Menu</h2>
+<div class="description">
+   <p> Discretizations </p> 
+   <ul>
+       <li> Discontinuous Galerkin</li>
+   </ul>    
+
+   <p> Finite Element Shapes </p>
+   <ul>
+       <li> Segment, 2 and 3 nodes. </li>
+       <li> Triangle, 3 and 6 nodes.  </li>
+       <li> Quadrangle, 4, 8 and 9 nodes. </li>
+       <li> Tetrahedron, 4, and 10 nodes. </li>
+       <li> Hexahedron, 8, 20 and 27 nodes.  </li>
+       <li> Prism, 6 and 15 nodes.</li>
+       <li> Pyramid, 5 and 13 nodes.</li>
+   </ul>
+   
+   <p> Finite Element Spaces (all FE Shapes supported) </p> 
+   <ul>
+      <li> Physical frame modal basis functions 
+           <ul>
+	      <li>Arbitrary order orthonormal basis by means of the Modified Gram–Schmidt process. </li>
+	      <li>Rescaled rotated monomials. </li>
+	   </ul>
+      <li> Reference frame modal basis function </li>
+           <ul>
+	      <li> Generalized tensor product basis functions based on Jacobi polynomials. </li>
+	      <li> Monomials. </li>
+	   </ul>
+      <li> Mapping functions
+           <ul>
+              <li> First and second order Lagrangian basis functions. </li>
+           </ul>
+      <li> Quadrature rules 
+           <ul>
+              <li> Arbitrary order Gauss-Jacobi quadrature rules. </li>
+           </ul>
+   </ul>
+
+   <p> FE Data Storage </p> 
+   <ul>
+       <li> FE related quantities for the whole grid can be stored once and for all in contiguous vectors.</li>
+       <li> FE related quantities can be computed on the fly over each mesh element and mesh face. </li>
+   </ul>    
+
+   <p> Local Matrix Assembly </p>
+   <ul>
+       <li> Can be written to be dimension independent (1, 2 and 3D).</li>
+       <li> Can be written to exploit matrix and vectors arithmetic as provided by <a href="http://eigen.tuxfamily.org/dox/index.html" target="_blank" title="Eigen">Eigen3</a>.</li>
+   </ul>
+
+   <p> Solution visualization </p>
+   <ul>
+       <li> Solution output in the parallel vtk format (.pvtu). </li>
+       <li> Cell subdivision depending on the polynomial degree for visualization purposes. </li>
+   </ul>
+
+   <p> Examples </p>
+   <ul>
+       <li> L2 projection </li>
+       <li> Poisson Equation </li>
+           <ul>
+	      <li> Interior Penalty dG discretization. </li>
+	      <li> BR2 dG discretization. </li>
+           </ul>
+       <li> Stokes </li>
+       <li> Incompressible Navier-Stokes (Kovasznay flow) </li>
+           <ul>
+	      <li> Convective term dG discretization proposed by Di Pietro and Ern, Mathemathics of Computation 79(271):1303-1330, 2010. </li>
+	      <li> Convective term dG discritization proposed by Bassi, Crivellini, Di Pietro, and Rebay, Journal of Computational Physics 218(2):794-815, 2006. </li>
+           </ul>
+   </ul>
+</div>   
+
+<h2>External Libraries</h2>
+<div class="description">
+<p> SpaFEDTe is based on high-quality open-source external libraries </p>
+   <ul>
+     <li><a href="http://trac.mcs.anl.gov/projects/ITAPS/wiki/MOAB" target="_blank" title="MOAB">MOAB</a> </li>
+                        (A Mesh-Oriented datABase), here used for distributed parallel mesh management and mesh partitioning. 
+   </ul>			
+   <ul>
+     <li><a href="http://www.mcs.anl.gov/petsc/" target="_blank" title="PETSc">PETSc</a> </li>
+                        (Portable, Extensible Toolkit for Scientific Computation), 
+                         here used for parallel matrices and vectors data structures and the solution of linear and linearized systems in parallel. 
+   </ul>			
+   <ul>			
+     <li><a href="http://eigen.tuxfamily.org/" target="_blank" title="Eigen">Eigen3</a> </li> 
+                        (a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms) 
+                         here used for local vectors and matrices data types, linear algebra, matrix and vector arithmetic and efficient local assembly. 
+   </ul>
+</div>
+
+
+<h2>Missing features</h2>	
+<div class="description_2">
+<p> Output for simulation restart </p>
+</div>
+ 
+<h2>Future plans</h2>	
+<div class="description_2">
+<p> Agglomerated elements implementation </p> 
+<p> h- and p-adatptivity </p>
+<p> A posteriori error estimation </p>
+<p> h-multigrid </p>
+<p> More testing </p>
+</div> 
+
+<h2>Funding</h2>	
+<div class="description_2">
+	<div class="attachment_container">
+	  <a href="media/unibg.png" rel="lightbox" title="unibg logo"><img class="left_snippet" src="media/unibg.png" alt="unibg logo"/></a>
+    </div>
+<p> This work received funds from PROGRAMMI DI RICERCA SCIENTIFICA DI RILEVANTE INTERESSE NAZIONALE (DM n. 1407 del 4 dicembre 2008), 
+    Sviluppo di una piattaforma di calcolo di ordine elevato per applicazioni industriali di Fluidodinamica e Aeroacustica computazionale. </p> 
+</div> 
+     
+<div class="pre_footer"></div>
+</div>

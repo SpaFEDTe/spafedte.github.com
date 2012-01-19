@@ -1,0 +1,42 @@
+---
+layout: main
+title: Installation
+---
+
+<h1>Installation</h1>
+<div class="description">
+    <p>SpaFEDTe should compile and work at least on Linux and Mac OSX.<p>
+</div>
+
+
+<h2>SpaFEDTe Requirements</h2>
+<div class="description_2">
+    <p>In order to successfully use SpaFEDTe, the following software has to be installed in your system, each with it's own dependencies:</p>
+	<ul>
+	<li><a href="http://www.mcs.anl.gov/research/projects/mpich2/" target="_blank" title="mpich">MPICH2</a></li>
+	<li><a href="http://www.mcs.anl.gov/petsc/" target="_blank" title="PETSc">PETSc</a> (download version 3.2)</li>
+	   <ul>
+	      <li><a href="http://www.netlib.org/clapack/" target="_blank" title="f2cblaslapack">f2cblaslapack</a></li>
+	   </ul>
+	<li><a href="http://trac.mcs.anl.gov/projects/ITAPS/wiki/MOAB" target="_blank" title="MOAB">MOAB</a> (download version 4.1)</li>
+	   <ul>
+	      <li><a href="http://www.hdfgroup.org/HDF5/" target="_blank" title="hdf5">HDF5</a> (default MOAB parallel mesh format)</li>
+	      <ul>
+	         <li><a href="http://zlib.net/" target="_blank" title="zlib">zlib</a></li>
+	         <li><a href="http://www.hdfgroup.org/doc_resource/SZIP/" target="_blank" title="szip">SZIP</a></li>
+	      </ul>
+	      <li><a href="http://www.cs.sandia.gov/zoltan/" target="_blank" title="zoltan">Zoltan</a> (for MOAB mesh partitioning capabilities)</li>
+	      <ul>
+	         <li><a href="http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview" target="_blank" title="parmetis">parMETIS</a></li>
+	      </ul>
+	   </ul>
+	<li><a href="http://eigen.tuxfamily.org/" target="_blank" title="Eigen">Eigen3</a></li>
+	</ul>
+</div>
+
+<h2>Compiling from source</h2>
+<div class="description_2">
+  <p> Some details on how to compile SpaFEDTe with dependencies can be found in the README.INSTALL file in the main directory. </p>
+</div>
+
+<div class="pre_footer"></div>
