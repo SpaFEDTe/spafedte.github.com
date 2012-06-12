@@ -32,7 +32,8 @@
 	<div class="content">
 	    <h1>News</h1>
 <div class="description">
-  <h5>Jan 19, 2011: first SpaFEDTe commit.</h5>
+  <h5>Jan 19, 2012: first SpaFEDTe commit.</h5>
+  <h5>Jun 13, 2012: agglomerated elements implementation is available.</h5>
 </div>
 
 
@@ -63,16 +64,17 @@
        <li> Hexahedron, 8, 20 and 27 nodes.  </li>
        <li> Prism, 6 and 15 nodes.</li>
        <li> Pyramid, 5 and 13 nodes.</li>
+       <li> Agglomerated elements.</li> 
    </ul>
    
-   <p> Finite Element Spaces (all FE Shapes supported) </p> 
+   <p> Finite Element Spaces </p> 
    <ul>
-      <li> Physical frame modal basis functions 
+      <li> Physical frame modal basis functions (all FE Shapes)
            <ul>
 	      <li>Arbitrary order orthonormal basis by means of the Modified Gram–Schmidt process. </li>
 	      <li>Rescaled rotated monomials. </li>
 	   </ul>
-      <li> Reference frame modal basis function </li>
+      <li> Reference frame modal basis function (edge, tri, quad, tet, hex, prism, pyramid) </li>
            <ul>
 	      <li> Generalized tensor product basis functions based on Jacobi polynomials. </li>
 	      <li> Monomials. </li>
@@ -114,11 +116,12 @@
 	      <li> BR2 dG discretization. </li>
            </ul>
        <li> Stokes </li>
-       <li> Incompressible Navier-Stokes (Kovasznay flow) </li>
+       <li> Incompressible Navier-Stokes (Kovasznay flow, Ethier-Steinman 3D exact solution) </li>
            <ul>
 	      <li> Convective term dG discretization proposed by Di Pietro and Ern, Mathemathics of Computation 79(271):1303-1330, 2010. </li>
 	      <li> Convective term dG discritization proposed by Bassi, Crivellini, Di Pietro, and Rebay, Journal of Computational Physics 218(2):794-815, 2006. </li>
            </ul>
+       <li> Pseudo-Transient Continuation (2D Lid-Driven Cavity) </li>
    </ul>
 </div>   
 
@@ -149,7 +152,6 @@
  
 <h2>Future plans</h2>	
 <div class="description_2">
-<p> Agglomerated elements implementation </p> 
 <p> h- and p-adatptivity </p>
 <p> A posteriori error estimation </p>
 <p> h-multigrid </p>
