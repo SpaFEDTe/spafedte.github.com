@@ -12,6 +12,17 @@
 	<script type="text/javascript" src="js/prototype.js"></script>
 	<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-40281600-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
 </head>
 
 <body>
@@ -39,7 +50,7 @@
 
 <h1>Welcome</h1>
 <div class="description">
-  <p> SpaFEDTe is a Template based C++ library for creating Discontinuous Finite Element Spaces. </p>
+  <p> SpaFEDTe is a Templated C++ library for creating Discontinuous Finite Element Spaces. </p>
   
   <p> The ultimate (quite ambitious) goal is to provide a framework for the numerical approximation of PDEs.
   Many high-quality finite element libraries exist and many of them offer a more comprehensive set of features. So, why SpaFEDTe? </p>
@@ -64,17 +75,17 @@
        <li> Hexahedron, 8, 20 and 27 nodes.  </li>
        <li> Prism, 6 and 15 nodes.</li>
        <li> Pyramid, 5 and 13 nodes.</li>
-       <li> Agglomerated elements.</li> 
+       <li> Agglomerated elements (polygons and polyhedrons).</li> 
    </ul>
    
    <p> Finite Element Spaces </p> 
    <ul>
       <li> Physical frame modal basis functions (all FE Shapes)
            <ul>
-	      <li>Arbitrary order orthonormal basis by means of the Modified Gram–Schmidt process. </li>
+	      <li>Arbitrary order orthonormal basis by means of the Modified Gram–Schmidt algorithm. </li>
 	      <li>Rescaled rotated monomials. </li>
 	   </ul>
-      <li> Reference frame modal basis function (edge, tri, quad, tet, hex, prism, pyramid) </li>
+      <li> Reference frame modal basis function (FE Shapes admitting a reference frame analogue)</li>
            <ul>
 	      <li> Generalized tensor product basis functions based on Jacobi polynomials. </li>
 	      <li> Monomials. </li>
@@ -91,20 +102,20 @@
 
    <p> FE Data Storage </p> 
    <ul>
-       <li> FE related quantities for the whole grid can be stored once and for all in contiguous vectors.</li>
-       <li> FE related quantities can be computed on the fly over each mesh element and mesh face. </li>
+       <li> FE related quantities can be stored once and for all in contiguous vectors (useful for agglomerated elements meshes).</li>
+       <li> FE related quantities can be computed on the fly during assembly. </li>
    </ul>    
 
    <p> Local Matrix Assembly </p>
    <ul>
-       <li> Can be written to be dimension independent (1, 2 and 3D).</li>
-       <li> Can be written to exploit matrix and vectors arithmetic as provided by <a href="http://eigen.tuxfamily.org/dox/index.html" target="_blank" title="Eigen">Eigen3</a>.</li>
+       <li> Assembly code can be dimension independent (1, 2 and 3D).</li>
+       <li> Assembly exploits matrix and vectors arithmetic provided by <a href="http://eigen.tuxfamily.org/dox/index.html" target="_blank" title="Eigen">Eigen3</a>.</li>
    </ul>
 
    <p> Solution visualization </p>
    <ul>
        <li> Solution output in the parallel vtk format (.pvtu). </li>
-       <li> Cell subdivision depending on the polynomial degree for visualization purposes. </li>
+       <li> Subdivision in sub-cells according to the polynomial degree for visualization purposes. </li>
    </ul>
 
    <p> Examples </p>
@@ -155,7 +166,7 @@
 <p> h- and p-adatptivity </p>
 <p> A posteriori error estimation </p>
 <p> h-multigrid </p>
-<p> More testing </p>
+<p> hybrid FV </p>
 </div> 
 
 <h2>Funding</h2>	
